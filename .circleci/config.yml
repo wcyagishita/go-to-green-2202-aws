@@ -67,8 +67,7 @@ jobs:
     docker:
       - image: node:current-slim
     steps:
-      - run:
-        command: echo "deploy ok!"
+      - run: echo "deploy ok!"
 
 workflows:
   run:
