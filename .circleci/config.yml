@@ -63,6 +63,11 @@ jobs:
       - store_test_results:
           path: test-results
 
+  deploy:
+    docker:
+      - image: node:current-slim
+    steps: echo "deploy ok!"
+
 workflows:
   run:
     jobs:
@@ -73,3 +78,8 @@ workflows:
       - unit-tests:
           requires:
             - prepare-dependencies
+      - deploy:
+          requires:
+            - build
+          requires:
+            - unit-tests
