@@ -6,3 +6,4 @@ jobs:
       - image: node:current-slim
     steps:
       - run: echo "Hello world!"
+      - run: echo "OK!!"
